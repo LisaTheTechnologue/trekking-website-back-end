@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/api/users")
 public class UserController {
 
     // standard constructors
@@ -18,12 +19,12 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @GetMapping("/users")
+    @GetMapping("")
     public List<User> getUsers() {
         return (List<User>) userRepository.findAll();
     }
 
-    @PostMapping("/users")
+    @PostMapping("/create")
     void addUser(@RequestBody User user) {
         userRepository.save(user);
     }

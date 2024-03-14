@@ -18,7 +18,7 @@ import java.util.Date;
 @Table(name = "t_user", schema = "trekking_owner")
 @Entity
 @Data
-public class User {
+public class User implements IFormatData{
 
     @Column(name = "id", nullable = false)
     @Id
@@ -74,4 +74,14 @@ public class User {
     @Column(name = "UPDATED_DATE")
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedDate;
+
+    @Override
+    public void formatData() {
+        if(isActive==null){
+            isActive=true;
+        }
+        if(role==null){
+            role=UserRole.MEMBER;
+        }
+    }
 }

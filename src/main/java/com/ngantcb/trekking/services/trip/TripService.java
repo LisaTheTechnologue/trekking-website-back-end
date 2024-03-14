@@ -1,4 +1,4 @@
-package com.ngantcb.trekking.services.admin.trip;
+package com.ngantcb.trekking.services.trip;
 
 import com.ngantcb.trekking.dto.TripDto;
 

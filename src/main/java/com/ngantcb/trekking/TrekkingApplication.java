@@ -6,6 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.stream.Stream;
 
@@ -22,6 +23,8 @@ public class TrekkingApplication {
 				User user = new User();
 				user.setUsername(username);
 				user.setEmail(username.toLowerCase() + "@domain.com");
+				user.setPassword(new BCryptPasswordEncoder().encode(username));
+				user.formatData();
 				userRepository.save(user);
 			});
 			userRepository.findAll().forEach(System.out::println);

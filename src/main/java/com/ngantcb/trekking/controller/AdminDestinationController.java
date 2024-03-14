@@ -2,7 +2,7 @@ package com.ngantcb.trekking.controller;
 
 import com.ngantcb.trekking.dto.DestinationDto;
 import com.ngantcb.trekking.entity.Destination;
-import com.ngantcb.trekking.services.admin.destination.DestinationService;
+import com.ngantcb.trekking.services.destination.DestinationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.ngantcb.trekking.services.admin.destination;
+package com.ngantcb.trekking.services.destination;
 
 import com.ngantcb.trekking.dto.DestinationDto;
 import com.ngantcb.trekking.entity.Destination;

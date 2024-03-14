@@ -17,7 +17,7 @@ public class JwtUtil {
 
     // at least 256 bits
     public static final String JWT_SECRET = "2072e45c4ee1e59456ce4a10ad6a6e03fa464ae7146bd78782667f0fb9fbf3ae9985e5514d9bc13a8af725d22f82a432971c4684e87fd0861066e0b93c209a7bd436bbe528bd12e03a94d8320dfbfc98128c3604d3d52963f9919775bb7318c012e7b8ba91124f8653fc071167dac3fbde0cfb68d4fdfab63ee39f33711186f145b1c7afcf303545ebd17f204184cc6ca14f0c8fe0131d13db5bc48de90be31fec87b0352a1b2dc4d5368c006464a4d056b68266ad50f0f8c24f44b72a7a6a0b02cb91e3095aa8761da08197ef74ced65574200aee2fc94d91e10ffefb85575ac3f29b18f6d3bb84127b945a4ce5d2170ce40a4690e981731418af2d89447617";
-    private final long JWT_EXPIRATION = 604800000L;
+    private final long JWT_EXPIRATION = 3600L;
     public String generateToken(String username) {
         Map<String,Object> claims = new HashMap<>();
         return createToken(claims, username);
